@@ -15,16 +15,17 @@ export default function Card({
 }) {
   return (
     <div
-      className={`relative col-span-1 h-96 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md ${
+      className={`relative col-span-1 h-96 md:lg:w-96 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md ml-10 pl-5 pt-10
+       ${
         large ? "md:col-span-2" : ""
       }`}
     >
-      <div className="flex h-60 items-center justify-center">{demo}</div>
-      <div className="mx-auto max-w-md text-center">
-        <h2 className="bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-xl font-bold text-transparent md:text-3xl md:font-normal">
+      <div className="flex">{demo}</div>
+      <div className="mx-auto max-w-md">
+        <h2 className="bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-xl font-bold  md:font-normal">
           <Balancer>{title}</Balancer>
         </h2>
-        <div className="prose-sm -mt-2 leading-normal text-gray-500 md:prose">
+        <div className="text-sm prose-sm -mt-2 leading-normal text-gray-500 md:prose">
           <Balancer>
             <ReactMarkdown
               components={{
@@ -33,7 +34,7 @@ export default function Card({
                     target="_blank"
                     rel="noopener noreferrer"
                     {...props}
-                    className="font-medium text-gray-800 underline transition-colors"
+                    className="text-sm font-medium text-gray-800 underline transition-colors"
                   />
                 ),
                 code: ({ node, ...props }) => (
