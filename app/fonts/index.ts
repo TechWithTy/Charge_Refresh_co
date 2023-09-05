@@ -10,3 +10,8 @@ export const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
+
+export const mont = localFont({
+  src: './Montserrat-VariableFont_wght.ttf',
+  variable: '--font-mont',
+})

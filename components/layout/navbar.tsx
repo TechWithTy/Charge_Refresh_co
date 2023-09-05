@@ -21,8 +21,7 @@ export default function NavBar({ session }: { session: Session | null }) {
     <div className="relative z-50 drop-shadow-md shadow-md dark:shadow-white  light:bg-white dark:bg-black light:text-gray-100 dark:text-white p-4 mb-2">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
-          <Image src="/logo.png" alt="Logo" width={10} height={10} className="w-10 h-10 mr-2" />
-          <span className="text-xl font-semibold">Mobhill</span>
+          <Image src="/logo.png" alt="Logo" width={120} height={40} className="mr-2" />
         </div>
         <ul className="flex space-x-4">
           <li><a href="#" className="hover:text-blue-500 mx-1">Home</a></li>

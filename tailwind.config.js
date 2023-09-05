@@ -12,7 +12,15 @@ module.exports = {
       fontFamily: {
         display: ["var(--font-sf)", "system-ui", "sans-serif"],
         default: ["var(--font-inter)", "system-ui", "sans-serif"],
+        mont: ['var(--font-mont)'],
       },
+      borderRadius: {
+        'custom': '12px',      // Applies the same radius to all corners
+        'custom-r': '0 10% 10% 0', // Applies a radius only to the top-left corner
+        'custom-l': '10% 0 0 10%', // Applies a radius only to the top-right corner
+
+      },
+
       animation: {
         // Fade up and down
         "fade-up": "fade-up 0.5s",
