@@ -37,7 +37,7 @@ export default async function Home() {
               </Balancer>
             </div>
 
-            <div className="z-50 w-screen">
+            <div className="z-50 w-full">
               <CarSelectionDropdown></CarSelectionDropdown>
             </div>
             <div className="flex my-10 mx-2 ">
