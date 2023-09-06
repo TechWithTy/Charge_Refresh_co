@@ -18,7 +18,7 @@ module.exports = {
         'custom': '12px',      // Applies the same radius to all corners
         'custom-r': '0 10% 10% 0', // Applies a radius only to the top-left corner
         'custom-l': '10% 0 0 10%', // Applies a radius only to the top-right corner
-
+        'custom-bl': '0 0 0 10%', // Applies a radius only to
       },
 
       animation: {

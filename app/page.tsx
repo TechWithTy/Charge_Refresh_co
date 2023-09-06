@@ -59,7 +59,7 @@ export default async function Home() {
           </div>
           {/* Image on the right */}
           <div className="h-full -z-30 bg-inherit shadow-none">
-            <CarGalleryCarousel className="h-full rounded-bl-3xl bg-gray-300"></CarGalleryCarousel>
+            <CarGalleryCarousel className="h-full rounded-custom-bl bg-gray-300 overflow-hidden"></CarGalleryCarousel>
             {/* <Image
               src="/hero.png" // Replace with your image URL
               alt="Illustration"

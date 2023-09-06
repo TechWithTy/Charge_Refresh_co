@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 const CarGalleryCarousel = ({ className }: { className?: string }) => {
@@ -12,14 +13,15 @@ const CarGalleryCarousel = ({ className }: { className?: string }) => {
         },
         // Add more car data objects as needed
     ];
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
         <div className={className + ' font-mont'}>
             <div className="h-full w-full rounded-none" >
-                {carData.map((car) => (
-                    <div key={car.id} className="h-full w-full relative">
+                {carData.map((car, index) => (
+                    <div key={car.id} className={`h-full w-full relative  ${currentIndex == index ? 'visible' : ' hidden'}`}>
                         {/* Car image */}
-                        <Image className="w-full h-full rounded-none" src={car.imageUrl} alt={car.carName} width={400} height={500} />
+                        <Image className="w-full h-full rounded-none -z-20" src={car.imageUrl} alt={car.carName} width={400} height={500} />
 
                         {/* Car type and name */}
                         <div className="absolute top-0 left-0 p-2 text-white ml-10 mt-10">
