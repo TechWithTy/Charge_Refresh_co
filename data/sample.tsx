@@ -18,3 +18,18 @@ export const cardData = [
   ]
   
 export  const carList = ['HONDA', 'FORD', 'TOYOTA', 'PORSCHE', "MUSTANG"]
+
+export const carDataList = [
+  {
+    id: 1,
+    carType: 'Sports Car',
+    carName: 'Porsche GT',
+    startingPrice: '$150,000',
+    imageUrl: '/hero.png', // Replace with actual image URL
+    carPrice: '$150,000',
+    transmission: "automatic",
+    seating: "2",
+    fuelType: "petrol"
+},
+
+]

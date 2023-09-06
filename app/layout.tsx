@@ -34,7 +34,7 @@ export default async function RootLayout({
           {/* @ts-expect-error Server Component */}
           <Nav />
         </Suspense>
-        <main className="flex min-h-screen w-full flex-col items-center justify-center py-10">
+        <main className="flex min-h-screen w-full flex-col items-center justify-center font-mont">
           {children}
         </main>
         <Footer />

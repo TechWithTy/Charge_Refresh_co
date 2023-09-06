@@ -18,7 +18,7 @@ export default function NavBar({ session }: { session: Session | null }) {
     setIsOptionsOpen(!isOptionsOpen);
   };
   return <>
-    <div className="relative z-50 drop-shadow-md shadow-md dark:shadow-white  light:bg-white dark:bg-black light:text-gray-100 dark:text-white p-4 mb-2">
+    <div className="relative z-50 drop-shadow-md shadow-md dark:shadow-white  light:bg-white dark:bg-black light:text-gray-100 dark:text-white p-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <Image src="/logo.png" alt="Logo" width={120} height={40} className="mr-2" />
