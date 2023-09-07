@@ -6,22 +6,17 @@ export default function Card({
   title,
   description,
   demo,
-  large,
 }: {
   title: string;
   description: string;
   demo: ReactNode;
-  large?: boolean;
 }) {
   return (
     <div
-      className={`relative col-span-1 md:lg:h-full md:lg:w-96 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md ml-10 pl-5 py-5
-       ${
-        large ? "md:col-span-2" : ""
-      }`}
+      className={`relative w-1/3 md:lg:h-fit min-h-full overflow-hidden rounded-xl border border-gray-200 bg-white shadow-xl drop-shadow-lg ml-10 pl-5 pt-10`}
     >
-      <div className="flex">{demo}</div>
-      <div className="mx-auto max-w-md">
+      <div className="flex px-10">{demo}</div>
+      <div className="mx-auto py-5 px-10">
         <h2 className="bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-xl font-bold  md:font-normal">
           <Balancer>{title}</Balancer>
         </h2>

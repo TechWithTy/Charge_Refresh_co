@@ -19,6 +19,7 @@ export const metadata = {
   },
   metadataBase: new URL("https://precedent.dev"),
   themeColor: "#FFF",
+
 };
 
 export default async function RootLayout({
@@ -28,13 +29,13 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cx(sfPro.variable, inter.variable)}>
-        <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100 dark:bg-gradient-to-br:from-gray-800:to-cyan-100  " />
+      <body className={cx(sfPro.variable, inter.variable) + ` max-w-screen`}>
+        <div className="fixed h-screen w-screen bg-gradient-to-br from-indigo-50 via-white to-cyan-100 dark:bg-gradient-to-br:from-gray-800:to-cyan-100" />
         <Suspense fallback="...">
           {/* @ts-expect-error Server Component */}
           <Nav />
         </Suspense>
-        <main className="flex min-h-screen w-full flex-col items-center justify-center font-mont">
+        <main className="flex w-screen min-h-screen flex-col items-center justify-center font-mont">
           {children}
         </main>
         <Footer />

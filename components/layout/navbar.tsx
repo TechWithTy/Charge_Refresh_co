@@ -18,9 +18,9 @@ export default function NavBar({ session }: { session: Session | null }) {
     setIsOptionsOpen(!isOptionsOpen);
   };
   return <>
-    <div className="relative z-50 drop-shadow-md shadow-md dark:shadow-white  light:bg-white dark:bg-black light:text-gray-100 dark:text-white p-4">
+    <div className="relative w-screen z-50 drop-shadow-md shadow-md dark:shadow-white  light:bg-white dark:bg-black light:text-gray-100 dark:text-white p-4">
       <div className="flex items-center justify-between">
-        <div className="flex items-center">
+        <div className="flex items-cente ml-10">
           <Image src="/logo.png" alt="Logo" width={120} height={40} className="mr-2" />
         </div>
         <ul className="flex space-x-4">
@@ -47,7 +47,7 @@ export default function NavBar({ session }: { session: Session | null }) {
           <li><a href="#" className="hover:text-blue-500 mx-1">Contact</a></li>
           <li><a href="#" className="hover:text-blue-500 mx-1">Invest</a></li>
         </ul>
-        <div className="flex items-end space-x-2">
+        <div className="flex items-end space-x-2 mr-10">
           <div className="flex text-sm font-bold rounded m-2 bg-blue-100 text-blue-700 px-5 py-2">
           <PhoneCall  fill="blue"  className="mx-1 p-1" color="blue" />
            +1 23 456 789123</div>
