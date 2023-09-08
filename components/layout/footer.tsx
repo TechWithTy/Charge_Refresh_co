@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <>
       <hr />
-      <div className="absolute bg-white dark:bg-black dark:text-white grid grid-cols-4 grid-rows-1 w-full text-center py-10 px-10 font-mont">
+      <div className="absolute bg-white dark:bg-black dark:text-white grid grid-cols-4 grid-rows-1 w-full text-center py-10 px-10 font-mont mt-10">
 
         <div className="flex flex-col">
           <div className="flex gap-3 my-2">
@@ -49,21 +49,18 @@ export default function Footer() {
         <div className="flex flex-col text-left">
           <h2 className="font-bold text-left px-10 ">Contact</h2>
           <div className="flex my-2 h-16 px-10 justify-start items-center align-middle">
-              <div className="flex justify-center items-center bg-darkblue rounded-full h-10 w-10">
-                <Image className="z-30" src={'/address.svg'} alt={""} width={20} height={20}></Image>
-              </div>
-              <div className="bg-blue-100 rounded h-3/4 w-full "><span className="mx-4">77 Highfield Road London N36 7SB</span></div>
+            <div className="flex justify-center items-center bg-darkblue rounded-full h-10 w-10">
+              <Image className="z-30" src={'/address.svg'} alt={""} width={20} height={20}></Image>
+            </div>
+            <div className="bg-blue-100 rounded h-3/4 w-full "><span className="mx-4">77 Highfield Road London N36 7SB</span></div>
           </div>
           <div className="flex my-2 h-16 px-10 justify-start items-center  align-middle">
-              <div className="flex justify-center items-center bg-darkblue rounded-full h-10 w-10">
-                <Image className="z-30 bg-darkblue rounded-full " src={'/phone.svg'} alt={""} width={20} height={20}></Image>
-              </div>
-              <div className="bg-blue-100 rounded h-3/4 w-full"><span className="mx-4">412 444 1124</span></div>
-
+            <div className="flex justify-center items-center bg-darkblue rounded-full h-10 w-10">
+              <Image className="z-30 bg-darkblue rounded-full " src={'/phone.svg'} alt={""} width={20} height={20}></Image>
+            </div>
+            <div className="bg-blue-100 rounded h-3/4 w-full"><span className="mx-4">412 444 1124</span></div>
           </div>
         </div>
-
-
       </div>
     </>
   );

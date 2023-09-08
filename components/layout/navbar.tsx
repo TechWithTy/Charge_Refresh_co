@@ -49,8 +49,9 @@ export default function NavBar({ session }: { session: Session | null }) {
         </ul>
         <div className="flex items-end space-x-2 mr-10">
           <div className="flex text-sm font-bold rounded m-2 bg-blue-100 text-blue-700 px-5 py-2">
-          <PhoneCall  fill="blue"  className="mx-1 p-1" color="blue" />
-           +1 23 456 789123</div>
+            <PhoneCall fill="blue" className="mx-1 p-1" color="blue" />
+            +1 23 456 789123
+            </div>
           <div className="text-sm m-2 rounded border-2 px-4 py-2 dark:border-gray-100 light:border-gray-800"> EN</div>
         </div>
       </div>

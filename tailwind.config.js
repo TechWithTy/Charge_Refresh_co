@@ -9,6 +9,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      backgroundImage: {
+        "corner-blue": "url('/BGshape.png')"
+      },
       colors: {
          'darkblue': "#0D3DE5"
       },

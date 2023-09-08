@@ -2,13 +2,14 @@ import CarSelectionDropdown from "@/components/carSelection";
 import Balancer from "react-wrap-balancer";
 import Image from 'next/image'
 import Card from "@/components/home/card";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, PhoneCall } from "lucide-react";
 import { carList, cardData } from "data/sample";
 import TrendingChip from "@/components/home/trendingChip";
 import CarGalleryCarousel from "@/components/home/heroCarousel";
 import CarDealCard from "@/components/layout/DealsCard";
-import { carDataList } from "data/sample";
+import { freshDeals } from "data/sample";
 import FlipCarousel from "@/components/FlipCarousel";
+import ContactForm from "@/components/ContactForm";
 
 
 export default async function Home() {
@@ -17,7 +18,7 @@ export default async function Home() {
   return (
     <>
 
-      <section className="z-30 bg-gray-100 px-1 pb-10 w-full h-screen font-mont">
+      <section className="z-30 bg-gray-100 px-1 pb-10 w-full h-screen font-mont pr-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Text on the left */}
 
@@ -75,10 +76,10 @@ export default async function Home() {
       </section>
 
 
-      <section className="z-30 bg-gray-100 px-1 py-10 w-full">
+      <section className="z-30 bg-gray-100 px-1 py-24 w-full bg-corner-blue bg-[length:55vh_55vh] bg-right-top bg-no-repeat pr-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Image on the right */}
-          <div className="bg-inherit shadow-none pr-24">
+          <div className="bg-inherit shadow-none pr-24 py-16">
             <Image
               src="/section-2.png" // Replace with your image URL
               alt="Illustration"
@@ -88,7 +89,7 @@ export default async function Home() {
             />
           </div>
 
-          <div className="flex flex-col align-top h-full">
+          <div className="flex flex-col align-top h-full py-16">
             <div className="">
               <div className="flex flex-col text-3xl text-black font-bold m-10">
                 <span>
@@ -119,7 +120,7 @@ export default async function Home() {
 
         </div>
       </section>
-      <section className="z-30 bg-gray-100 px-1 py-10 w-full">
+      <section className="z-30 bg-gray-100 px-1 py-10 w-full pr-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Image on the right */}
           <div className="bg-inherit shadow-none ml-10">
@@ -134,13 +135,13 @@ export default async function Home() {
               </p>
 
               <div className="text-center align-middle bg-darkblue w-40 h-16 text-white m-10 rounded-lg shadow-2xl  shadow-blue-300">
-                  <span>Discover More</span>
+                <span>Discover More</span>
               </div>
             </div>
           </div>
 
           <div className="h-full w-full z-30">
-            <FlipCarousel 
+            <FlipCarousel
               slides={[
                 <Image className="h-full w-full m-0" src={'/hero.png'} alt={"slide"} height={400} width={300}></Image>,
                 <Image className="h-full w-full m-0" src={'/section-2.png'} alt={"slide"} height={400} width={300}></Image>,
@@ -151,27 +152,52 @@ export default async function Home() {
 
         </div>
       </section>
-      <section className="z-30 bg-gray-100 px-1 py-10 w-full max-h-screen leading-normal">
+      <section className="relative z-30 bg-gray-100 px-1 py-10 w-full h-screen  max-h-screen leading-normal pr-10">
+        <div className=" absolute w-full h-full bg-corner-blue bg-no-repeat bg-right-top bg-[length:55vh_55vh] transform rotate-180 pt-20">
+        </div>
+
         <div className=" flex-col gap-1 items-center">
           <div className="font-bold text-5xl w-full text-center m-2 mb-10">
             <Balancer>Add Ons</Balancer>
           </div>
           <div className="font-normal text-base w-full text-center flex items-center justify-center m-2">
             <Balancer className="w-1/2">
-            Explore Addons To Make Your Experience More Seamless.
+              Explore Addons To Make Your Experience More Seamless.
             </Balancer>
           </div>
         </div>
-        <div>
-          <CarDealCard carName={carDataList[0].carName}
-            carPrice={carDataList[0].carPrice}
-            carType={carDataList[0].carType}
-            fuelType={carDataList[0].fuelType}
-            seating={carDataList[0].seating}
-            transmission={carDataList[0].transmission}
-            carImage={carDataList[0].imageUrl}></CarDealCard>
+        <div className="w-full py-5 h-3/4">
+          <CarDealCard
+            id="091283-201"
+            name={freshDeals[0].name}
+            price={freshDeals[0].price}
+            dealType={freshDeals[0].dealType}
+            description={freshDeals[0].description}
+            extra={freshDeals[0].extra}
+            image={freshDeals[0].image}
+            car={freshDeals[0].car}></CarDealCard>
         </div>
       </section>
+
+      <section className="relative z-30 bg-gray-100 px-1 py-10 w-full h-screen  max-h-screen leading-normal pr-10 font-mont">
+        <div className="realtive flex justify-center items-center align-middle h-full">
+          <div className="flex flex-col align-middle justify-center  w-full h-1/2 bg-darkblue rounded-3xl text-left">
+            <div className="w-1/3  text-white text-5xl font-bold py-10 px-10 ">
+              Have any question about us?
+            </div>
+            <div className="w-2/12 flex text-sm font-bold rounded bg-blue-50 text-blue-700 px-10 py-2 mx-10">
+              <PhoneCall fill="blue" className="mx-1 p-1" color="blue" />
+              +1 23 456 789123
+            </div>
+            <div>
+            </div>
+          </div>
+          <div className="absolute h-3/4 w-1/3 transform translate-x-1/2">
+            <ContactForm></ContactForm>
+          </div>
+        </div>
+      </section>
+
     </>
 
   );
