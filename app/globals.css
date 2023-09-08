@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input.autofill-neutral:-webkit-autofill,
+input.autofill-neutral:-webkit-autofill:hover,
+input.autofill-neutral:-webkit-autofill:focus,
+input.autofill-neutral:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px rgb(212 212 212 ) inset !important;
+}

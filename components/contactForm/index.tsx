@@ -48,7 +48,7 @@ function ContactForm() {
                     <input
                         type="text"
                         id="name"
-                        className="border-0 border-b-2  focus:border-darkblue p-2 focus:border-transparent focus:outline-none ring-0  bg-transparent w-full outline-none"
+                        className="border-0 border-b-2  focus:border-darkblue p-2 focus:border-transparent focus:outline-none ring-0  bg-transparent w-full outline-none autofill-neutral"
                         placeholder="Your Name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -60,7 +60,7 @@ function ContactForm() {
                     <input
                         type="email"
                         id="email"
-                        className="border-0 border-b-2  focus:border-darkblue p-2 p-2 focus:outline-none bg-transparent w-full"
+                        className="border-0 border-b-2  focus:border-darkblue p-2 focus:border-transparent focus:outline-none ring-0 focus:outline-none bg-transparent w-full autofill-neutral"
                         placeholder="Your Email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -72,7 +72,7 @@ function ContactForm() {
                     <textarea
                         id="message"
                         rows={4}
-                        className="border-0 border-b-2  focus:border-darkblue focus:border-none focus:border-b-2 foucs:ring-0 p-2 focus:!outline-none bg-transparent w-full"
+                        className="border-0 border-b-2  focus:border-darkblue focus:border-none focus:border-b-2 foucs:ring-0 p-2 focus:outline-none bg-transparent w-full autofill-neutral"
                         placeholder="Your Message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
