@@ -21,7 +21,7 @@ module.exports = {
         mont: ['var(--font-mont)'],
       },
       borderRadius: {
-        'custom': '12px',      // Applies the same radius to all corners
+        'custom': '8%',      // Applies the same radius to all corners
         'custom-r': '0 10% 10% 0', // Applies a radius only to the top-left corner
         'custom-l': '10% 0 0 10%', // Applies a radius only to the top-right corner
         'custom-bl': '0 0 0 10%', // Applies a radius only to
@@ -32,8 +32,9 @@ module.exports = {
         "fade-up": "fade-up 0.5s",
         "fade-down": "fade-down 0.5s",
         // Tooltip
-        "slide-up-fade": "slide-up-fade 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-up-fade": "slide-up-fade 1s cubic-bezier(0.16, 1, 0.3, 1)",
         "slide-down-fade": "slide-down-fade 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-up-fade-away": "slide-up-fade-away 0.3s cubic-bezier(0.16, 1, 0.3, 1)"
       },
       keyframes: {
         // Fade up and down
@@ -67,6 +68,10 @@ module.exports = {
         "slide-up-fade": {
           "0%": { opacity: 0, transform: "translateY(6px)" },
           "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        "slide-up-fade-away": {
+          "0%": { opacity: 0, transform: "translateY(0)" },
+          "100%": { opacity: 1, transform: "translateY(100)" },
         },
         "slide-down-fade": {
           "0%": { opacity: 0, transform: "translateY(-6px)" },

@@ -41,9 +41,9 @@ function ContactForm() {
                 <div className="mb-4">
                     <label
                         htmlFor="name"
-                        className="absolute left-3 -top-3 transition-all duration-300 ease-in-out text-gray-500 text-sm"
+                        className="transition-all duration-300 ease-in-out text-gray-500 text-sm"
                     >
-                       Name
+                       Name : 
                     </label>
                     <input
                         type="text"
