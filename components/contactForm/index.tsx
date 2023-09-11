@@ -60,7 +60,7 @@ function ContactForm() {
                     <input
                         type="email"
                         id="email"
-                        className="border-0 border-b-2  focus:border-darkblue p-2 focus:border-transparent focus:outline-none ring-0 focus:outline-none bg-transparent w-full autofill-neutral"
+                        className="border-0 border-b-2  focus:border-darkblue p-2 focus:border-transparent focus:outline-none ring-0  bg-transparent w-full autofill-neutral"
                         placeholder="Your Email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}

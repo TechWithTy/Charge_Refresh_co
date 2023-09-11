@@ -29,8 +29,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cx(sfPro.variable, inter.variable) + ` max-w-screen`}>
-        <div className="fixed h-screen w-screen bg-gradient-to-br from-indigo-50 via-white to-cyan-100 dark:bg-gradient-to-br:from-gray-800:to-cyan-100" />
+      <body className={cx(sfPro.variable, inter.variable) }>
         <Suspense fallback="...">
           {/* @ts-expect-error Server Component */}
           <Nav />

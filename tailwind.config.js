@@ -32,9 +32,11 @@ module.exports = {
         "fade-up": "fade-up 0.5s",
         "fade-down": "fade-down 0.5s",
         // Tooltip
-        "slide-up-fade": "slide-up-fade 1s cubic-bezier(0.16, 1, 0.3, 1)",
-        "slide-down-fade": "slide-down-fade 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
-        "slide-up-fade-away": "slide-up-fade-away 0.3s cubic-bezier(0.16, 1, 0.3, 1)"
+        "slide-up-fade": "slide-up-fade 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-left-fade": "slide-left-fade 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-left-fade-away": "slide-left-fade-away 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-right-fade": "slide-right-fade 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-right-fade-away": "slide-right-fade-away 0.5s cubic-bezier(0.16, 1, 0.3, 1)"
       },
       keyframes: {
         // Fade up and down
@@ -66,16 +68,23 @@ module.exports = {
         },
         // Tooltip
         "slide-up-fade": {
-          "0%": { opacity: 0, transform: "translateY(6px)" },
+          "0%": { opacity: 0.2, transform: "translateY(35px)" },
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
-        "slide-up-fade-away": {
-          "0%": { opacity: 0, transform: "translateY(0)" },
-          "100%": { opacity: 1, transform: "translateY(100)" },
+        "slide-left-fade-away": {
+          "0%": { opacity: 1, transform: "translateX(0)" },
+          "100%": { opacity: 0, transform: "translateX(-300px)" },
         },
-        "slide-down-fade": {
-          "0%": { opacity: 0, transform: "translateY(-6px)" },
+        "slide-left-fade": {
+          "0%": { opacity: 0, transform: "translateY(10px)" },
           "100%": { opacity: 1, transform: "translateY(0)" },
+        }, "slide-right-fade-away": {
+          "0%": { opacity: 1, transform: "translateX(0)" },
+          "100%": { opacity: 0, transform: "translateX(300px)" },
+        },
+        "slide-right-fade": {
+          "0%": { opacity: 0, transform: "translateX(-10px)" },
+          "100%": { opacity: 1, transform: "translateX(0)" },
         },
       },
     },

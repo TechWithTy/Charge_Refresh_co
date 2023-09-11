@@ -18,8 +18,7 @@ export default function NavBar({ session }: { session: Session | null }) {
     setIsOptionsOpen(!isOptionsOpen);
   };
   return <>
-    <div className="relative w-screen z-50 drop-shadow-md shadow-md dark:shadow-white  light:bg-white dark:bg-black light:text-gray-100 dark:text-white p-4">
-      <div className="flex items-center justify-between">
+    <div className="relative flex items-center justify-between w-full max-w-screen z-50 drop-shadow-md shadow-md dark:shadow-white  light:bg-white dark:bg-black light:text-gray-100 dark:text-white p-4">
         <div className="flex items-cente ml-10">
           <Image src="/logo.png" alt="Logo" width={120} height={40} className="mr-2" />
         </div>
@@ -55,7 +54,5 @@ export default function NavBar({ session }: { session: Session | null }) {
           <div className="text-sm m-2 rounded border-2 px-4 py-2 dark:border-gray-100 light:border-gray-800"> EN</div>
         </div>
       </div>
-    </div>
-
   </>
 }
