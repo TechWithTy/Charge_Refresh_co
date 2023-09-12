@@ -4,7 +4,6 @@ import { ChevronLeft, ChevronRight, Circle } from "lucide-react";
 import React, { useState } from 'react'
 
 export type FlipCarouselProps = React.HTMLAttributes<HTMLDivElement> & {
-
     slides: React.ReactNode[]
 }
 function FlipCarousel({ slides }: FlipCarouselProps) {
@@ -22,27 +21,26 @@ function FlipCarousel({ slides }: FlipCarouselProps) {
         
         setAnimate('next');
 
-        setNextIndex((index) => index == totalSlides - 1 ? 0 : (index + 1));
+        setNextIndex( currentIndex == totalSlides - 1 ? 0 : (currentIndex + 1));
 
         setAnimateSlide(true);
         setTimeout(() => {
-            setCurrentIndex((index) => index == totalSlides - 1 ? 0 : (index + 1));
             setAnimateSlide(false);
-        }, 500);
+            setCurrentIndex((index) => index == totalSlides - 1 ? 0 : (index + 1));
+        }, 400);
     };
 
     function handlePrevSlide () {
         // Implement logic to move to the previous slide
         setAnimate('prev');
 
-        setPrevIndex((index) => index == 0 ? totalSlides - 1 : (index - 1))
-
+        setPrevIndex(currentIndex == 0 ? totalSlides - 1 : (currentIndex - 1))
 
         setAnimateSlide(true);
         setTimeout(() => {
-            setCurrentIndex((index) => index == 0 ? totalSlides - 1 : (index - 1));
             setAnimateSlide(false);
-        }, 500);
+            setCurrentIndex((index) => index == 0 ? totalSlides - 1 : (index - 1));
+        }, 400);
 
     };
     return (

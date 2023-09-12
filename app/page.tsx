@@ -238,6 +238,28 @@ export default async function Home() {
       </section>
 
       <section className="relative z-30 bg-gray-100 px-1 py-10 w-full h-screen  max-h-screen leading-normal font-mont">
+        <div className="flex justify-center items-center h-full">
+          <div className="w-1/2 h-full">
+            <FlipCarousel slides={[]}></FlipCarousel>
+          </div>
+          <div className="w-1/3 p-10">
+             <div className="m-1">Elon R. - Palo Alto, CA- ⭐⭐⭐⭐⭐</div>
+             <div className="text-5xl font-bold m-1">
+                <h1>Ultimate Detailing Package</h1>
+             </div>
+             <div className="text-lg m-1">
+              <Balancer>
+              "I've used many detailing services in the past, but none come close to Charge Refresh. The attention to detail, especially with the Ultimate Detailing Package, is impeccable. My Model S looks and feels brand new every time."
+              </Balancer>
+             </div>
+          </div>
+        </div>
+
+
+
+      </section>
+
+      <section className="relative z-30 bg-gray-100 px-1 py-10 w-full h-screen  max-h-screen leading-normal font-mont">
         <div className="realtive flex justify-center items-center align-middle h-full">
           <div className="flex flex-col align-middle justify-center  w-full h-1/2 bg-darkblue rounded-3xl text-left">
             <div className="w-1/3  text-white text-5xl font-bold py-10 px-10 ">

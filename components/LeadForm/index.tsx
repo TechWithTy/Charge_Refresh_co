@@ -1,20 +1,28 @@
 'use client'
-import React, { useState } from 'react'
+import useIntersectionObserver from "@/lib/hooks/use-intersection-observer";
+import React, { useEffect, useRef, useState } from 'react'
 
 function LeadForm() {
 
-    const [display, setDisplay] = useState(true);
+    const [display, setDisplay] = useState(false);
+    const modal = useRef<HTMLDivElement>(null)
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         // Add your form submission logic here
     };
+    const handleVisible = useIntersectionObserver(modal, { threshold: 0.5, freezeOnceVisible: true })
 
-    function onClose () {
+
+    function onClose() {
         setDisplay(false)
     }
 
+    useEffect(() => {
+        setDisplay(true)
+
+    }, [handleVisible?.isIntersecting]);
     return (
-    <div className={`${display? 'visible': 'hidden'} fixed inset-0 flex items-center justify-center z-50 `}>
+        <div ref={modal} className={`${display ? 'visible' : 'hidden'} fixed inset-0 flex items-center justify-center z-50 `}>
             <div className="absolute inset-0 backdrop-blur-md "></div>
 
             <div className="relative bg-opacity-30 bg-gradient-to-b from-white via-pink-200 to-purple-500 rounded-lg p-8 max-w-md w-full">
