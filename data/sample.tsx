@@ -1,4 +1,4 @@
-import { ServiceDealProps } from "@/components/layout/DealsCard"
+import CarDealCard, { ServiceDealProps } from "@/components/layout/DealsCard"
 import Image from "next/image"
 export const cardData = [
   {
@@ -68,4 +68,66 @@ export const freshDeals: ServiceDealProps[] = [
     car: 'Tesla'
 
   }
+]
+
+
+export const carDealsList = [
+
+  <CarDealCard
+    id="091283-201"
+    name={freshDeals[0].name}
+    price={freshDeals[0].price}
+    dealType={freshDeals[0].dealType}
+    description={freshDeals[0].description}
+    extra={freshDeals[0].extra}
+    image={freshDeals[0].image}
+    car={freshDeals[0].car}></CarDealCard>,
+  <CarDealCard
+    id="091283-201"
+    name={freshDeals[0].name}
+    price={freshDeals[0].price}
+    dealType={freshDeals[0].dealType}
+    description={freshDeals[0].description}
+    extra={freshDeals[0].extra}
+    image={freshDeals[0].image}
+    car={freshDeals[0].car}></CarDealCard>,
+  <CarDealCard
+    id="091283-201"
+    name={freshDeals[0].name}
+    price={freshDeals[0].price}
+    dealType={freshDeals[0].dealType}
+    description={freshDeals[0].description}
+    extra={freshDeals[0].extra}
+    image={freshDeals[0].image}
+    car={freshDeals[0].car}></CarDealCard>,
+  <CarDealCard
+    id="091283-201"
+    name={freshDeals[0].name}
+    price={freshDeals[0].price}
+    dealType={freshDeals[0].dealType}
+    description={freshDeals[0].description}
+    extra={freshDeals[0].extra}
+    image={freshDeals[0].image}
+    car={freshDeals[0].car}></CarDealCard>,
+  <CarDealCard
+    id="091283-201"
+    name={freshDeals[0].name}
+    price={freshDeals[0].price}
+    dealType={'DISCOUNT'}
+    description={freshDeals[0].description}
+    extra={freshDeals[0].extra}
+    image={freshDeals[0].image}
+    car={freshDeals[0].car}></CarDealCard>,
+  <CarDealCard
+    id="091283-201"
+    name={freshDeals[0].name}
+    price={freshDeals[0].price}
+    dealType={'DISCOUNT'}
+    description={freshDeals[0].description}
+    extra={freshDeals[0].extra}
+    image={freshDeals[0].image}
+    car={freshDeals[0].car}></CarDealCard>
+
+
+
 ]

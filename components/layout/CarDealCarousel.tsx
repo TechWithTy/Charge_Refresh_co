@@ -8,33 +8,31 @@ function CarDealCarousel({ cards }: React.HTMLAttributes<HTMLDivElement> & { car
 
   const totalCards = cards.length;
   const [currentPage, setCurrentPage] = useState(0);
-  const swiphandlers = useSwipe({ onSwipedLeft: prevSlide, onSwipedRight: nextSlide })
+  const swipehandlers = useSwipe({ onSwipedLeft: prevSlide, onSwipedRight: nextSlide })
 
   function prevSlide() {
-    setCurrentPage(prev => prev - 1)
+    setCurrentPage(prev => prev==0?  2: prev -1)
 
   }
   function nextSlide() {
-    setCurrentPage(prev => prev +1)
+    setCurrentPage(prev => prev==2 ? 0: prev +1)
   }
   return (
     <>
-      <div className='flex flex-col justify-center items-center h-full w-full'>
+      <div {...swipehandlers}  className='flex flex-col justify-center items-center h-full w-full z-50'>
         <div className="flex w-full h-5/6 gap-5">
-          {cards.slice(currentPage, currentPage + 3).map((card, index) => {
+          {cards.slice(currentPage*3,currentPage*3 +3 ).map((card, index) => {
             return <div key={index} className="h-full w-2/6 px-5">{card}</div>
           })}
         </div>
         <div className="flex  h-1/6 w-full justify-center items-center align-middle gap-5">
-          <button onClick={nextSlide} className="text-black dark:text-white py-2 px-4 border-none cursor-pointer">
+          <button onClick={prevSlide} className="text-black dark:text-white py-2 px-4 border-none cursor-pointer">
             <ChevronLeft className=''></ChevronLeft>
-
           </button>
-          {[0, 1, 2, 3].map((value, index) => {
-
+          {[0, 1, 2].map((value, index) => {
             return <div key={index} className={`${index === currentPage ? 'w-20 bg-darkblue' : 'w-7 bg-gray-400'}  h-2 rounded-full`}></div>
           })}
-          <button onClick={prevSlide} className="text-black dark:text-white py-2 px-4 border-none cursor-pointer">
+          <button onClick={nextSlide} className="text-black dark:text-white py-2 px-4 border-none cursor-pointer">
             <ChevronRight className=''></ChevronRight>
           </button>
         </div>

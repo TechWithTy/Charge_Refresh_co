@@ -1,10 +1,11 @@
 'use client'
 import useIntersectionObserver from "@/lib/hooks/use-intersection-observer";
+import { X } from "lucide-react";
 import React, { useEffect, useRef, useState } from 'react'
 
 function LeadForm() {
 
-    const [display, setDisplay] = useState(false);
+    const [display, setDisplay] = useState(true);
     const modal = useRef<HTMLDivElement>(null)
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
@@ -25,7 +26,7 @@ function LeadForm() {
         <div ref={modal} className={`${display ? 'visible' : 'hidden'} fixed inset-0 flex items-center justify-center z-50 `}>
             <div className="absolute inset-0 backdrop-blur-md "></div>
 
-            <div className="relative bg-opacity-30 bg-gradient-to-b from-white via-pink-200 to-purple-500 rounded-lg p-8 max-w-md w-full">
+            <div className="relative bg-opacity-10 bg-gradient-to-b from-white via-pink-200 to-purple-500 rounded-lg p-8 max-w-md w-full">
                 <div className="text-center mb-6">
                     <h2 className="text-2xl font-bold">Sign up and Get 20%Off!</h2>
                 </div>
@@ -57,7 +58,7 @@ function LeadForm() {
 
                     <button
                         type="submit"
-                        className="w-full bg-opacity-30  bg-gradient-to-r from-white via-white to-purple-800 text-white py-2 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:ring-purple-500"
+                        className="w-full bg-opacity-30   text-white py-2 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:ring-purple-500"
                     >
                         Subscribe
                     </button>
@@ -67,7 +68,7 @@ function LeadForm() {
                     className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 cursor-pointer"
                     onClick={onClose}
                 >
-                    Close
+                    <X></X>
                 </button>
             </div>
         </div>

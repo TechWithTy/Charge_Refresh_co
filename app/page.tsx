@@ -3,7 +3,7 @@ import Balancer from "react-wrap-balancer";
 import Image from 'next/image'
 import Card from "@/components/home/card";
 import { ArrowRight, PhoneCall } from "lucide-react";
-import { carList, cardData } from "data/sample";
+import { carDealsList, carList, cardData } from "data/sample";
 import TrendingChip from "@/components/home/trendingChip";
 import CarGalleryCarousel from "@/components/home/heroCarousel";
 import CarDealCard from "@/components/layout/DealsCard";
@@ -156,9 +156,8 @@ export default async function Home() {
         <LeadForm></LeadForm>
       </section>
       <section className="relative z-30 bg-gray-100 px-1 py-10 w-full h-screen  max-h-screen leading-normal">
-        <div className=" absolute w-full h-full bg-corner-blue bg-no-repeat bg-right-top bg-[length:55vh_55vh] transform rotate-180 pt-20">
+        <div className="absolute w-full h-full bg-corner-blue bg-no-repeat bg-right-top bg-[length:55vh_55vh] transform rotate-180 pt-20 -z-10">
         </div>
-
         <div className=" flex-col gap-1 items-center">
           <div className="font-bold text-5xl w-full text-center m-2 mb-10">
             <Balancer>Add Ons</Balancer>
@@ -172,65 +171,7 @@ export default async function Home() {
         <div className="w-full py-5 h-3/4">
 
           <CarDealCarousel
-            cards={[
-              <CarDealCard
-                id="091283-201"
-                name={freshDeals[0].name}
-                price={freshDeals[0].price}
-                dealType={freshDeals[0].dealType}
-                description={freshDeals[0].description}
-                extra={freshDeals[0].extra}
-                image={freshDeals[0].image}
-                car={freshDeals[0].car}></CarDealCard>,
-              <CarDealCard
-                id="091283-201"
-                name={freshDeals[0].name}
-                price={freshDeals[0].price}
-                dealType={freshDeals[0].dealType}
-                description={freshDeals[0].description}
-                extra={freshDeals[0].extra}
-                image={freshDeals[0].image}
-                car={freshDeals[0].car}></CarDealCard>,
-              <CarDealCard
-                id="091283-201"
-                name={freshDeals[0].name}
-                price={freshDeals[0].price}
-                dealType={freshDeals[0].dealType}
-                description={freshDeals[0].description}
-                extra={freshDeals[0].extra}
-                image={freshDeals[0].image}
-                car={freshDeals[0].car}></CarDealCard>,
-              <CarDealCard
-                id="091283-201"
-                name={freshDeals[0].name}
-                price={freshDeals[0].price}
-                dealType={freshDeals[0].dealType}
-                description={freshDeals[0].description}
-                extra={freshDeals[0].extra}
-                image={freshDeals[0].image}
-                car={freshDeals[0].car}></CarDealCard>,
-              <CarDealCard
-                id="091283-201"
-                name={freshDeals[0].name}
-                price={freshDeals[0].price}
-                dealType={freshDeals[0].dealType}
-                description={freshDeals[0].description}
-                extra={freshDeals[0].extra}
-                image={freshDeals[0].image}
-                car={freshDeals[0].car}></CarDealCard>,
-              <CarDealCard
-                id="091283-201"
-                name={freshDeals[0].name}
-                price={freshDeals[0].price}
-                dealType={freshDeals[0].dealType}
-                description={freshDeals[0].description}
-                extra={freshDeals[0].extra}
-                image={freshDeals[0].image}
-                car={freshDeals[0].car}></CarDealCard>
-
-
-
-            ]}
+            cards={carDealsList}
 
           ></CarDealCarousel>
 
@@ -272,7 +213,7 @@ export default async function Home() {
             <div>
             </div>
           </div>
-          <div className="absolute h-3/4 w-1/3 transform translate-x-1/2">
+          <div className="absolute h-5/6  w-1/3 transform translate-x-1/2">
             <ContactForm></ContactForm>
           </div>
         </div>
