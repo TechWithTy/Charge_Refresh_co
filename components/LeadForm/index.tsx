@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from 'react'
 
 function LeadForm() {
 
-    const [display, setDisplay] = useState(true);
+    const [display, setDisplay] = useState(false);
     const modal = useRef<HTMLDivElement>(null)
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();

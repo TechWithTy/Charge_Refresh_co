@@ -2,7 +2,8 @@
 import useSwipe from "@/lib/hooks/use-swipe-gesture";
 import { ChevronLeft, ChevronRight, Circle } from "lucide-react";
 import React, { useState } from 'react'
-
+import Image from "next/image";
+import Dots from '@/public/dotMatrix.svg'
 export type FlipCarouselProps = React.HTMLAttributes<HTMLDivElement> & {
     slides: React.ReactNode[]
 }
@@ -46,6 +47,7 @@ function FlipCarousel({ slides }: FlipCarouselProps) {
     return (
         <>
             <div {...swipeHandler} className="relative flex flex-col-reverse  justify-center items-center overflow-x-hidden h-full w-full z-50 ">
+                <div className="absolute w-40 h-20 top-0 left-0 fill-darkblue"><Dots/></div>
                 <div className="flex flex-row justify-around items-center h-1/3">
                     <button onClick={handlePrevSlide} className=" text-black dark:text-white  py-2 px-4 border-none cursor-pointer left-0">
                         <ChevronLeft className=''></ChevronLeft>
@@ -71,7 +73,7 @@ function FlipCarousel({ slides }: FlipCarouselProps) {
                         >
                         </div>
                         <div
-                            className={`absolute h-full w-[90%] top-2 rounded-custom overflow-hidden ${!animateSlide ? 'block' : animate === 'next' ? 'animate-slide-right-fade-away': 'animate-slide-left-fade-away' }`}
+                            className={`absolute h-full w-[90%] top-2 rounded-custom overflow-hidden  bg-gradient-to-b from-gray-700 to-neutral-500 ${!animateSlide ? 'block' : animate === 'next' ? 'animate-slide-right-fade-away': 'animate-slide-left-fade-away' }`}
                         >
                         {slides[currentIndex]}
                     </div>
