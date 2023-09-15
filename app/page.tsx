@@ -153,7 +153,6 @@ export default async function Home() {
           </div>
 
         </div>
-        <LeadForm></LeadForm>
       </section>
       <section className="relative z-30 bg-gray-100 px-1 py-10 w-full h-screen  max-h-screen leading-normal">
         <div className="absolute w-full h-full bg-corner-blue bg-no-repeat bg-right-top bg-[length:55vh_55vh] transform rotate-180 pt-20 -z-10">
@@ -176,6 +175,8 @@ export default async function Home() {
           ></CarDealCarousel>
 
         </div>
+        <LeadForm></LeadForm>
+
       </section>
 
       <section className="relative z-30 bg-gray-100 px-1 py-10 w-full h-screen  max-h-screen leading-normal font-mont">
