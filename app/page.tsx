@@ -214,7 +214,7 @@ export default async function Home() {
             <div>
             </div>
           </div>
-          <div className="absolute h-5/6  w-1/3 transform translate-x-1/2">
+          <div className="absolute min-h-fit  w-1/3 transform translate-x-1/2">
             <ContactForm></ContactForm>
           </div>
         </div>

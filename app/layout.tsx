@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
-import { sfPro, inter } from "./fonts";
+import { sfPro, inter, mont } from "./fonts";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
@@ -29,12 +29,12 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cx(sfPro.variable, inter.variable) }>
+      <body className={cx(sfPro.variable, inter.variable, mont.variable) }>
         <Suspense fallback="...">
           {/* @ts-expect-error Server Component */}
           <Nav />
         </Suspense>
-        <main className="flex w-screen min-h-screen flex-col items-center justify-center font-mont">
+        <main className="flex  min-h-screen flex-col items-center justify-center font-mont">
           {children}
         </main>
         <Footer />

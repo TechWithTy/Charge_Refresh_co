@@ -19,11 +19,11 @@ function ContactForm() {
     };
 
     return (
-        <div className="w-full h-full mx-auto p-6 bg-neutral-300 rounded-lg shadow-lg">
-            <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                    <p className="mb-2 font-bold">I am interested in ...</p>
-                    <div className="flex justify-start flex-wrap gap-5">
+        <div className="w-full h-fit mx-auto p-6 bg-neutral-300 rounded-lg shadow-lg">
+            <form className="h-full w-full p-6" onSubmit={handleSubmit}>
+                <div className="mb-4 h-2/6">
+                    <p className="mb-2 font-bold h-1/6">I am interested in ...</p>
+                    <div className="flex justify-start flex-wrap gap-5 h-5/6">
                         {['Auto Detailing', 'Mobile Charging', 'Becoming a Partner', 'Investing', 'Other'].map((interest, index) => (
                             <button
                                 key={index}
@@ -38,7 +38,7 @@ function ContactForm() {
                         ))}
                     </div>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4 h-1/6">
                     <label
                         htmlFor="name"
                         className="transition-all duration-300 ease-in-out text-gray-500 text-sm"

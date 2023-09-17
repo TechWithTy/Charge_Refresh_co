@@ -23,7 +23,7 @@ function CarSelectionDropdown() {
 
   return (
     <>
-      <div className="bg-white w-full rounded-lg flex shadow-2xl text-center text-gray-500 dark:bg-gray-800 dark:text-white p-4 m-2">
+      <div className="bg-white w-full rounded-lg flex shadow-2xl text-center text-gray-500 dark:bg-gray-800 dark:text-white p-4">
         <div className="flex items-center space-x-4 w-full">
           <select
             className="md:lg:w-1/4 pr-8 py-10 rounded bg-transparent border-none text-gray-300 focus:outline-none"
