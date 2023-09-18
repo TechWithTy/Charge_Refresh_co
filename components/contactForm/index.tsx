@@ -1,6 +1,7 @@
 'use client'
 import { PlaneIcon, Send } from "lucide-react";
 import React, { useState } from 'react';
+import Dots from '@/public/dotMatrix.svg'
 
 function ContactForm() {
     const [selectedInterest, setSelectedInterest] = useState('');
@@ -20,6 +21,8 @@ function ContactForm() {
 
     return (
         <div className="w-full h-fit mx-auto p-6 bg-neutral-300 rounded-lg shadow-lg">
+            <div className="absolute -z-10 w-40 h-20 top-1/3  -translate-x-1/2   fill-darkblue"><Dots className="text-darkblue fill-darkblue" /></div>
+
             <form className="h-full w-full p-6" onSubmit={handleSubmit}>
                 <div className="mb-4 h-2/6">
                     <p className="mb-2 font-bold h-1/6">I am interested in ...</p>
@@ -29,8 +32,8 @@ function ContactForm() {
                                 key={index}
                                 onClick={() => handleInterestClick(interest)}
                                 className={`rounded-lg px-4 py-2 border-2 border-opacity-30 border-purple-800 focus:outline-none ${selectedInterest === interest
-                                        ? 'bg-darkblue text-white'
-                                        : 'bg-transparent hover:bg-blue-200  text-opacity-30 text-purple-800'
+                                    ? 'bg-darkblue text-white'
+                                    : 'bg-transparent hover:bg-blue-200  text-opacity-30 text-purple-800'
                                     }`}
                             >
                                 {interest}
@@ -43,7 +46,7 @@ function ContactForm() {
                         htmlFor="name"
                         className="transition-all duration-300 ease-in-out text-gray-500 text-sm"
                     >
-                       Name : 
+                        Name :
                     </label>
                     <input
                         type="text"

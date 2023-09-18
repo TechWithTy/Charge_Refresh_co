@@ -47,7 +47,7 @@ function FlipCarousel({ slides }: FlipCarouselProps) {
     return (
         <>
             <div {...swipeHandler} className="relative flex flex-col-reverse  justify-center items-center overflow-x-hidden h-full w-full z-50 ">
-                <div className="absolute w-40 h-20 top-0 left-0 fill-darkblue"><Dots/></div>
+                <div className="absolute w-10 h-10 top-0 left-0 fill-darkblue"><Dots className="text-darkblue fill-darkblue" /></div>
                 <div className="flex flex-row justify-around items-center h-1/3">
                     <button onClick={handlePrevSlide} className=" text-black dark:text-white  py-2 px-4 border-none cursor-pointer left-0">
                         <ChevronLeft className=''></ChevronLeft>

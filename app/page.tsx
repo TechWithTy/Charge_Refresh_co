@@ -102,7 +102,7 @@ export default async function Home() {
                 Our mission is to  revolutionize car cleaning with a seamless user experience. We envision customers having  a Sustainable, convenient, and top-quality detailing services. Founded by industry professionals with a focus on innovation and sustainability.
               </p>
             </div>
-            <div className="flex h-1/2 md:lg:-ml-[300px]">
+            <div className="flex min-h-fit md:lg:-ml-[300px]">
               {
                 cardData.map((item, index) => {
                   return (
