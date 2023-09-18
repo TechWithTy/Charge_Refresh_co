@@ -20,7 +20,7 @@ export default async function Home() {
   return (
     <>
 
-      <section className="z-30 bg-gray-100 px-1 pb-10 w-full h-screen font-mont">
+      <section className="z-30 bg-gray-100  pb-10 w-full h-screen font-mont">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Text on the left */}
 
@@ -78,7 +78,7 @@ export default async function Home() {
       </section>
 
 
-      <section className="z-30 bg-gray-100 px-1 py-24 w-full bg-corner-blue bg-[length:55vh_55vh] bg-right-top bg-no-repeat">
+      <section className="z-30 bg-gray-100  py-24 w-full bg-corner-blue bg-[length:55vh_55vh] bg-right-top bg-no-repeat">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Image on the right */}
           <div className="bg-inherit shadow-none pr-24 py-16">
@@ -122,7 +122,7 @@ export default async function Home() {
 
         </div>
       </section>
-      <section className="z-30 bg-gray-100 px-1 py-10 w-full max-h-screen">
+      <section className="z-30 bg-gray-100  py-10 w-full max-h-screen">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full">
           {/* Image on the right */}
           <div className="bg-inherit shadow-none ml-10 h-full">
@@ -154,8 +154,8 @@ export default async function Home() {
 
         </div>
       </section>
-      <section className="relative z-30 bg-gray-100 px-1 py-10 w-full h-screen  max-h-screen leading-normal">
-        <div className="absolute w-full h-full bg-corner-blue bg-no-repeat bg-right-top bg-[length:55vh_55vh] transform rotate-180 pt-20 -z-10">
+      <section className="relative z-30 bg-gray-100  py-10 w-full h-screen  max-h-screen leading-normal">
+        <div className="absolute w-full h-full bg-corner-blue bg-no-repeat bg-right-top bg-[length:55vh_55vh] transform rotate-180 -z-10">
         </div>
         <div className=" flex-col gap-1 items-center">
           <div className="font-bold text-5xl w-full text-center m-2 mb-10">
@@ -179,7 +179,7 @@ export default async function Home() {
 
       </section>
 
-      <section className="relative z-10 bg-gray-100 px-1 py-10 w-full h-[70vh]  max-h-screen leading-normal font-mont">
+      <section className="relative z-10 bg-gray-100  py-10 w-full h-[70vh]  max-h-screen leading-normal font-mont">
         <div className="flex justify-center items-center h-full">
           <div className="w-1/2 h-3/4">
             <FlipCarousel slides={[]}></FlipCarousel>
@@ -201,7 +201,7 @@ export default async function Home() {
 
       </section>
 
-      <section className="relative z-10 bg-gray-100 px-1 py-10 w-full h-screen  max-h-screen leading-normal font-mont">
+      <section className="relative z-10 bg-gray-100  py-10 w-full h-screen  max-h-screen leading-normal font-mont">
         <div className="realtive flex justify-center items-center align-middle h-full">
           <div className="flex flex-col align-middle justify-center  w-full h-1/2 bg-darkblue rounded-3xl text-left">
             <div className="w-1/3  text-white text-5xl font-bold py-10 px-10 ">
