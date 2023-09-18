@@ -47,7 +47,7 @@ function FlipCarousel({ slides }: FlipCarouselProps) {
     return (
         <>
             <div {...swipeHandler} className="relative flex flex-col-reverse  justify-center items-center overflow-x-hidden h-full w-full z-50 ">
-                <div className="flex flex-row justify-around items-center h-1/3">
+                <div className="flex flex-row justify-around items-center h-1/6">
 
                     <button onClick={handlePrevSlide} className=" text-black dark:text-white  py-2 px-4 border-none cursor-pointer left-0">
                         <ChevronLeft className=''></ChevronLeft>
@@ -62,29 +62,29 @@ function FlipCarousel({ slides }: FlipCarouselProps) {
                         <ChevronRight className=''></ChevronRight>
                     </button>
                 </div>
-                <div className="relative h-2/3 w-11/12">
+                <div className="relative h-5/6 w-11/12 p-20">
                     <div className="absolute w-16 h-20 top-20 left-0 text-darkblue fill-darkblue"><Dots className="text-darkblue fill-darkblue" /></div>
 
                     <div className="flex h-full items-center justify-center">
                         <div
-                            className={`absolute h-full w-[54%] top-16 rounded-custom overflow-hidden bg-gradient-to-b from-gray-600 to-neutral-300`}
+                            className={`absolute h-5/6 w-[54%] translate-y-5 rounded-custom overflow-hidden bg-gradient-to-b from-gray-600 to-neutral-300`}
                         >
                         </div>
                         <div
-                            className={`absolute h-full w-[72%] top-10 rounded-custom overflow-hidden bg-gradient-to-b from-gray-600 to-neutral-400`}
+                            className={`absolute h-5/6 w-[72%] translate-y-3 rounded-custom overflow-hidden bg-gradient-to-b from-gray-600 to-neutral-400`}
                         >
                         </div>
                         <div
-                            className={`absolute h-full w-[90%] top-2 rounded-custom overflow-hidden  bg-gradient-to-b from-gray-700 to-neutral-500 ${!animateSlide ? 'block' : animate === 'next' ? 'animate-slide-right-fade-away' : 'animate-slide-left-fade-away'}`}
+                            className={`absolute h-5/6 w-[90%]  rounded-custom overflow-hidden  bg-gradient-to-b from-gray-700 to-neutral-500 ${!animateSlide ? 'block' : animate === 'next' ? 'animate-slide-right-fade-away' : 'animate-slide-left-fade-away'}`}
                         >
                             {slides[currentIndex]}
                         </div>
                         {animate === 'next' ? <div
-                            className={`absolute h-full w-[90%] top-2 rounded-custom overflow-hidden ${!animateSlide ? 'hidden' : 'animate-slide-right-fade'}`}
+                            className={`absolute h-5/6 w-[90%]  rounded-custom overflow-hidden ${!animateSlide ? 'hidden' : 'animate-slide-right-fade'}`}
                         >
                             {slides[nextIndex]}
                         </div> : <div
-                            className={`absolute h-full w-[90%] top-2 rounded-custom overflow-hidden ${!animateSlide ? 'hidden' : 'animate-slide-left-fade'}`}
+                            className={`absolute h-5/6 w-[90%]  rounded-custom overflow-hidden ${!animateSlide ? 'hidden' : 'animate-slide-left-fade'}`}
                         >
                             {slides[prevIndex]}
                         </div>}

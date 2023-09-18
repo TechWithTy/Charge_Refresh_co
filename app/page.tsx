@@ -122,11 +122,11 @@ export default async function Home() {
 
         </div>
       </section>
-      <section className="z-30 bg-gray-100 px-1 py-10 w-full h-screen">
+      <section className="z-30 bg-gray-100 px-1 py-10 w-full max-h-screen">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full">
           {/* Image on the right */}
-          <div className="bg-inherit shadow-none ml-10">
-            <div className="">
+          <div className="bg-inherit shadow-none ml-10 h-full">
+            <div className="p-10 items-center">
               <div className="flex flex-col text-3xl text-black font-bold m-10">
                 <span>
                   <Balancer>Basic Wash</Balancer>
@@ -179,12 +179,12 @@ export default async function Home() {
 
       </section>
 
-      <section className="relative z-10 bg-gray-100 px-1 py-10 w-full h-screen  max-h-screen leading-normal font-mont">
+      <section className="relative z-10 bg-gray-100 px-1 py-10 w-full h-[70vh]  max-h-screen leading-normal font-mont">
         <div className="flex justify-center items-center h-full">
-          <div className="w-1/2 h-full">
+          <div className="w-1/2 h-3/4">
             <FlipCarousel slides={[]}></FlipCarousel>
           </div>
-          <div className="w-1/3 p-10">
+          <div className="w-1/2  h-3/4 p-10">
              <div className="m-1">Elon R. - Palo Alto, CA- ⭐⭐⭐⭐⭐</div>
              <div className="text-5xl font-bold m-1">
                 <h1>Ultimate Detailing Package</h1>
