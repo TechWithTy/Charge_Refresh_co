@@ -6,7 +6,7 @@ import { JsxElement } from "typescript"
 
 function CarDealCarousel({ cards }: React.HTMLAttributes<HTMLDivElement> & { cards: React.ReactNode[] }) {
 
-  const totalPages = cards.length % 3 === 0 ? cards.length / 3 : cards.length / 3 + 1;
+  const totalPages = cards.length % 3 === 0 ? cards.length / 3 :  Math.floor(cards.length / 3) + 1;
   const [currentPage, setCurrentPage] = useState(0);
   const swipehandlers = useSwipe({ onSwipedLeft: prevSlide, onSwipedRight: nextSlide })
 
