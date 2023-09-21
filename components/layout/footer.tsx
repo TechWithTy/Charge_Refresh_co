@@ -8,9 +8,8 @@ export default function Footer() {
   return (
     <>
       <hr />
-      <div className="absolute bg-white dark:bg-black dark:text-white grid grid-cols-4 grid-rows-1 w-full text-center py-10 px-10 font-mont mt-10">
-
-        <div className="flex flex-col">
+      <div className="bg-white dark:bg-black dark:text-white grid grid-flow-row grid-cols-2 grid-rows-2 md:grid-cols-2 lg:grid-cols-4 w-full text-center py-10 px-10 font-mont mt-10">
+        <div className="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col">
           <div className="flex gap-3 my-2">
             <Image className="" src={'/logo.svg'} alt="logo" height={20} width={20}></Image>
             <div className="font-bold text-xl">Charge Refresh</div>
@@ -29,7 +28,7 @@ export default function Footer() {
             <Instagram className="" color="#0D3DE5"></Instagram>
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col">
           <h2 className="font-bold text-left px-10">Quick Links</h2>
           <Link className="my-2 text-left px-10" href={'/about'}>About us</Link>
           <Link className="my-2 text-left px-10" href={'/contactus'}>Contact Us</Link>
@@ -37,16 +36,15 @@ export default function Footer() {
           <Link className="my-2 text-left px-10" href={'/login'}>Login</Link>
           <Link className="my-2 text-left px-10" href={'/register'}>Sign up</Link>
         </div>
-        <div className="flex flex-col">
+        <div className="col-span-1 md:col-span-1 lg:col-span-1 flex flex-col">
           <h2 className="font-bold text-left px-10">Support</h2>
           <Link className="my-2 text-left px-10" href={'/affiliate'}>Affiliate</Link>
           <Link className="my-2 text-left px-10" href={'/sitemap'}>Site Map</Link>
           <Link className="my-2 text-left px-10" href={'/cancel'}>Cancellation</Link>
           <Link className="my-2 text-left px-10" href={'/privacy'}>Privacy Policy</Link>
-          <Link className="my-2 text-left px-10" href={'/legal'}>Leagal disclaimer</Link>
+          <Link className="my-2 text-left px-10" href={'/legal'}>Legal disclaimer</Link>
         </div>
-
-        <div className="flex flex-col text-left">
+        <div className="col-span-1 md:col-span-1 lg:col-span-1 flex flex-col text-left">
           <h2 className="font-bold text-left px-10 ">Contact</h2>
           <div className="flex my-2 h-16 px-10 justify-start items-center align-middle">
             <div className="flex justify-center items-center bg-darkblue rounded-full h-10 w-10">
@@ -62,6 +60,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+
     </>
   );
 }

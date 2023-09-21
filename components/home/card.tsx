@@ -13,7 +13,7 @@ export default function Card({
 }) {
   return (
     <div
-      className={`relative w-1/3 md:lg:h-fit min-h-full overflow-hidden rounded-xl border border-gray-200 bg-white shadow-xl drop-shadow-lg ml-10 pl-5 pt-10`}
+      className={`flex-1 relative w-full lg:w-1/3 lg:h-fit lg:min-h-full overflow-hidden rounded-xl border border-gray-200 bg-white shadow-xl drop-shadow-lg lg:ml-10 pl-5 pt-10`}
     >
       <div className="flex px-10">{demo}</div>
       <div className="mx-auto py-5 px-10">

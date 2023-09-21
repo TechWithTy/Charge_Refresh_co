@@ -23,10 +23,11 @@ function CarSelectionDropdown() {
 
   return (
     <>
-      <div className="bg-white w-full rounded-lg flex shadow-2xl text-center text-gray-500 dark:bg-gray-800 dark:text-white p-4">
-        <div className="flex items-center space-x-4 w-full">
+      <div className="bg-white w-full rounded-lg flex flex-col md:flex-row md:shadow-2xl text-center text-gray-500 dark:bg-gray-800 dark:text-white p-4">
+        <div className="w-full md:w-1/2 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center">
+          {/* Company dropdown */}
           <select
-            className="md:lg:w-1/4 pr-8 py-10 rounded bg-transparent border-none text-gray-300 focus:outline-none"
+            className="w-full md:w-1/3 pr-8 py-2 md:py-10 rounded bg-transparent border-none text-gray-300 focus:outline-none"
             onChange={handleCompanyChange}
             value={selectedCompany}
           >
@@ -34,9 +35,10 @@ function CarSelectionDropdown() {
             <option value="company2">Company 2</option>
             {/* Add more company options */}
           </select>
-          <hr className="w-0.5 h-6 bg-gray-600" />
+
+          {/* Model dropdown */}
           <select
-            className="md:lg:w-1/4 pr-8 py-10 rounded bg-transparent border-none text-gray-300 focus:outline-none"
+            className="w-full md:w-1/3 pr-8 py-2 md:py-10 rounded bg-transparent border-none text-gray-300 focus:outline-none"
             onChange={handleModelChange}
             value={selectedModel}
           >
@@ -45,9 +47,10 @@ function CarSelectionDropdown() {
             <option value="model2">Model 2</option>
             {/* Add more model options */}
           </select>
-          <hr className="w-0.5 h-6 bg-gray-600" />
+
+          {/* Variant dropdown */}
           <select
-            className="md:lg:w-1/4 pr-8 py-10 rounded bg-transparent border-none text-gray-300 focus:outline-none"
+            className="w-full md:w-1/3 pr-8 py-2 md:py-10 rounded bg-transparent border-none text-gray-300 focus:outline-none"
             onChange={handleVariantChange}
             value={selectedVariant}
           >
@@ -56,15 +59,18 @@ function CarSelectionDropdown() {
             <option value="variant2">Variant 2</option>
             {/* Add more variant options */}
           </select>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded flex items-center h-full w-1/4 flex-grow">
-            <div className="flex justify-around w-full">
-              Find
-              <ArrowRight></ArrowRight>
-            </div>
-          </button>
         </div>
+
+        {/* Find button */}
+        <button className="bg-blue-500 text-white py-2 rounded mt-4 md:mt-0 w-full md:w-1/2">
+          <div className="flex items-center justify-center">
+            Find
+            <ArrowRight className="ml-2" />
+          </div>
+        </button>
       </div>
-     
+
+
     </>
   );
 }
