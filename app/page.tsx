@@ -170,11 +170,11 @@ export default async function Home() {
       </section>
 
       <section className="relative z-10 bg-gray-100 py-10 md:py-20 lg:py-24 xl:py-32 w-full h-[70vh] max-h-screen leading-normal font-mont">
-        <div className="flex flex-col md:flex-row justify-center items-center container mx-auto px-4  h-full">
-          <div className="w-full md:w-1/2 h-3/4 lg:px-10">
+        <div className="grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-8 items-center container mx-auto px-4  h-full">
+          <div className="w-full h-full md:px-10">
             <FlipCarousel slides={[]}></FlipCarousel>
           </div>
-          <div className="w-full md:w-1/2 h-3/4 p-5 md:p-10">
+          <div className="w-full p-5 md:p-10">
             <div className="m-1 text-center md:text-left">Elon R. - Palo Alto, CA- ⭐⭐⭐⭐⭐</div>
             <div className="text-3xl md:text-5xl font-bold m-1 text-center md:text-left">
               <h1>Ultimate Detailing Package</h1>
