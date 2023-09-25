@@ -145,10 +145,10 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="relative z-30 bg-gray-100  py-10 w-full h-screen  max-h-screen leading-normal">
+      <section className="relative z-30 bg-gray-100  py-10 w-full lg:max-h-screen leading-normal">
         <div className="absolute w-full h-full bg-corner-blue bg-no-repeat bg-right-top bg-[length:55vh_55vh] transform rotate-180 -z-10">
         </div>
-        <div className="items-center container mx-auto px-4 ">
+        <div className="items-center container mx-auto px-4 h-fit">
           <div className=" flex-col gap-1 items-center ">
             <div className="font-bold text-5xl w-full text-center m-2 mb-10">
               <Balancer>Add Ons</Balancer>
@@ -159,7 +159,7 @@ export default async function Home() {
               </Balancer>
             </div>
           </div>
-          <div className="w-full py-5 h-3/4">
+          <div className="w-full h-screen lg:h-auto py-5">
             <CarDealCarousel
               cards={carDealsList}
             ></CarDealCarousel>
@@ -171,7 +171,7 @@ export default async function Home() {
 
       <section className="relative z-10 bg-gray-100 py-10 md:py-20 lg:py-24 xl:py-32 w-full h-[70vh] max-h-screen leading-normal font-mont">
         <div className="flex flex-col md:flex-row justify-center items-center container mx-auto px-4  h-full">
-          <div className="w-full md:w-1/2 h-3/4">
+          <div className="w-full md:w-1/2 h-3/4 lg:px-10">
             <FlipCarousel slides={[]}></FlipCarousel>
           </div>
           <div className="w-full md:w-1/2 h-3/4 p-5 md:p-10">
@@ -190,9 +190,9 @@ export default async function Home() {
 
 
       <section className="relative z-10 bg-gray-100 py-10 md:py-20 lg:py-24 xl:py-32 w-full lg:first-letter leading-normal font-mont">
-        <div className="relative flex flex-col lg:flex-row justify-center items-center align-middle lg:h-1/2">
-          <div className="flex flex-col align-middle justify-center w-full h-1/2  bg-darkblue rounded lg:rounded-3xl text-center md:text-left">
-            <div className="w-full text-white text-3xl md:text-5xl font-bold py-4 md:py-10 px-4 md:px-10">
+        <div className="relative flex flex-col lg:flex-row justify-center items-center align-middle lg:min-h-max w-full overflow-hidden">
+          <div className="lg:absolute flex flex-col align-middle justify-center w-full h-1/2  bg-darkblue rounded lg:rounded-3xl text-center md:text-left">
+            <div className="w-full lg:w-1/2  text-white text-3xl md:text-5xl font-bold py-4 md:py-10 px-4 md:px-10">
               Have any questions about us?
             </div>
             <div className="w-full lg:w-1/3 lg:mx-4 flex justify-center text-sm md:text-base font-bold rounded bg-blue-50 text-blue-700 py-2 md:py-4 px-4 md:px-10  md:my-4 my-2">
@@ -200,7 +200,7 @@ export default async function Home() {
               +1 23 456 789123
             </div>
           </div>
-          <div className="lg:absolute  lg:min-h-fit w-full md:w-1/3  lg:transform lg:translate-x-1/2 p-6 ">
+          <div className="lg:relative  lg:min-h-fit w-full lg:w-1/2  lg:transform lg:translate-x-1/2 p-6 ">
             <ContactForm></ContactForm>
           </div>
         </div>

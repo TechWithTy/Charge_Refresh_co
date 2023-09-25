@@ -49,7 +49,7 @@ function LeadForm() {
         <div ref={modal} className="w-full overflow-hidden">
             <div className={`${display ? 'visible' : 'hidden'} fixed w-screen inset-0 flex items-center justify-center`}>
                 <div className="absolute inset-0 backdrop-blur-md w-full"></div>
-                <div className="relative bg-opacity-10 bg-gradient-to-b from-white via-pink-200 to-purple-500 rounded-lg p-8 w-full">
+                <div className="relative bg-opacity-10 bg-gradient-to-b from-white via-pink-200 to-purple-500 rounded-lg p-8 w-full lg:w-1/3">
                     <div className="text-center mb-6">
                         <h2 className="text-2xl font-bold">Sign up and Get 20%Off!</h2>
                     </div>

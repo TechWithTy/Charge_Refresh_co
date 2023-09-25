@@ -1,12 +1,13 @@
 'use client'
 import useSwipe from "@/lib/hooks/use-swipe-gesture"
+import useWindowSize from "@/lib/hooks/use-window-size";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useState } from 'react'
 import { JsxElement } from "typescript"
 
 function CarDealCarousel({ cards }: React.HTMLAttributes<HTMLDivElement> & { cards: React.ReactNode[] }) {
-
-  const totalPages = cards.length % 3 === 0 ? cards.length / 3 : Math.floor(cards.length / 3) + 1;
+  const sildesPerPage = useWindowSize().isMobile ? 1 : 3;
+  const totalPages = cards.length % sildesPerPage === 0 ? cards.length / sildesPerPage : Math.floor(cards.length / sildesPerPage) + 1;
   const [currentPage, setCurrentPage] = useState(0);
   const swipehandlers = useSwipe({ onSwipedLeft: prevSlide, onSwipedRight: nextSlide })
 
@@ -21,9 +22,9 @@ function CarDealCarousel({ cards }: React.HTMLAttributes<HTMLDivElement> & { car
     <>
       <div {...swipehandlers} className='flex flex-col justify-center items-center h-full w-full z-50'>
         <div className="flex flex-col md:flex-row w-full h-full gap-5">
-          {cards.slice(currentPage * 3, currentPage * 3 + 3).map((card, index) => {
+          {cards.slice(currentPage * sildesPerPage, currentPage * sildesPerPage + sildesPerPage).map((card, index) => {
             return (
-              <div key={index} className="md:w-2/6 w-full px-5">
+              <div key={index} className="w-full h-full px-5">
                 {card}
               </div>
             );
