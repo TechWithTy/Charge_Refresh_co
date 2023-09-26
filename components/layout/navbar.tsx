@@ -1,4 +1,4 @@
-
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
@@ -9,21 +9,27 @@ import { ChevronDown, Menu, PhoneCall } from "lucide-react";
 import { useState } from "react";
 export default function NavBar({ session }: { session: Session | null }) {
 
+  const [showNav, setShowNav] = useState(false);
+
   return (
     <>
       <div className="relative flex items-center justify-between w-full max-w-screen z-50 drop-shadow-md shadow-md dark:shadow-white light:bg-white dark:bg-black light:text-gray-100 dark:text-white p-4">
         <div className="flex items-center ml-10">
           <Image src="/logo.png" alt="Logo" width={120} height={40} className="mr-2" />
         </div>
-        <div className="peer lg:hidden">
-          <button className="">
+        <div className=" lg:hidden">
+          <button
+            onClick={() => setShowNav(prev => (!prev))}
+            aria-label="Navigation Options"
+            className="peer/nav z-50">
+
             <Menu></Menu>
           </button>
         </div>
 
 
         {/* Navigation links */}
-        <ul className={`hidden peer-focus:block peer-focus:animate-slide-left-fade fixed  flex-col justify-start items-center bg-white left-0 top-0 w-screen h-screen z-30 lg:bg-inherit lg:w-auto lg:h-auto lg:relative lg:flex lg:flex-row space-x-4`}>
+        <ul className={`${showNav ? 'hidden' : 'block animate-slide-left-fade'} fixed  flex-col justify-start items-center bg-white left-0 top-0 w-screen h-screen lg:bg-inherit lg:w-auto lg:h-auto lg:relative lg:flex lg:flex-row space-x-4 `}>
           {/* Hamburger icon for small screens */}
 
           <li>
