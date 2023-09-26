@@ -29,27 +29,25 @@ export default function NavBar({ session }: { session: Session | null }) {
 
 
         {/* Navigation links */}
-        <ul className={`${showNav ? 'hidden' : 'block animate-slide-left-fade'} fixed  flex-col justify-start items-center bg-white left-0 top-0 w-screen h-screen lg:bg-inherit lg:w-auto lg:h-auto lg:relative lg:flex lg:flex-row space-x-4 `}>
-          {/* Hamburger icon for small screens */}
-
-          <li>
+        <ul className={`${showNav ? 'hidden' : 'block animate-slide-left-fade container text-center py-5'} fixed flex-col justify-start items-center bg-white left-0 top-full w-screen h-screen lg:bg-inherit lg:w-auto lg:h-auto lg:relative lg:flex lg:flex-row `}>
+          <li className="hover:shadow-inner p-2 mx-4">
             <a href="#" className="hover:text-blue-500 mx-1">
               Home
             </a>
           </li>
-          <li>
+          <li className="hover:shadow-inner p-2 mx-4">
             <a href="#" className="hover:text-blue-500 mx-1">
               About
             </a>
           </li>
-          <li>
+          <li className="hover:shadow-inner p-2 mx-4">
             <a href="#" className="hover:text-blue-500 mx-1">
               Services
             </a>
           </li>
-          <li className="">
+          <li  className="hover:shadow-inner p-2 mx-4  text-center flex justify-center">
             <button
-              className="peer/specials hover:text-blue-500 flex mx-1"
+              className="peer/specials hover:text-blue-500 flex mx-1 self-center"
               aria-label="Toggle Car Specialties Options"
             >
               Car Specialties{' '}
@@ -68,24 +66,24 @@ export default function NavBar({ session }: { session: Session | null }) {
               </li>
             </ul>
           </li>
-          <li>
+          <li className="hover:shadow-inner p-2 mx-4">
             <a href="#" className="hover:text-blue-500 mx-1">
               Location
             </a>
           </li>
-          <li>
+          <li className="hover:shadow-inner p-2 mx-4">
             <a href="#" className="hover:text-blue-500 mx-1">
               Contact
             </a>
           </li>
-          <li>
+          <li className="hover:shadow-inner p-2 mx-4">
             <a href="#" className="hover:text-blue-500 mx-1">
               Invest
             </a>
           </li>
-          <li>
+          <li className="hover:shadow-inner p-2 mx-4">
             <div className="md:flex items-end space-x-2 mr-10 lg:hidden">
-              <div className="flex text-sm font-bold rounded m-2 bg-blue-100 text-blue-700 px-5 py-2">
+              <div className="flex justify-center text-sm font-bold rounded m-2 bg-blue-100 text-blue-700 px-5 py-2">
                 <PhoneCall fill="blue" className="mx-1 p-1" color="blue" />
                 +1 23 456 789123
               </div>
