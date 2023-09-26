@@ -29,7 +29,7 @@ export default function NavBar({ session }: { session: Session | null }) {
 
 
         {/* Navigation links */}
-        <ul className={`${showNav ? 'hidden' : 'block animate-slide-left-fade container text-center py-5'} fixed flex-col justify-start items-center bg-white left-0 top-full w-screen h-screen lg:bg-inherit lg:w-auto lg:h-auto lg:relative lg:flex lg:flex-row `}>
+        <ul className={`${!showNav ? 'hidden' : 'block animate-slide-left-fade container text-center py-5'} fixed flex-col justify-start items-center bg-white left-0 top-full w-screen h-screen lg:bg-inherit lg:w-auto lg:h-auto lg:relative lg:flex lg:flex-row `}>
           <li className="hover:shadow-inner p-2 mx-4">
             <a href="#" className="hover:text-blue-500 mx-1">
               Home
