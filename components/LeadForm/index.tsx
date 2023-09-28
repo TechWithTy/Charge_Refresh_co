@@ -49,7 +49,7 @@ function LeadForm() {
         <div ref={modal} className="w-full overflow-hidden">
             <div className={`${display ? 'visible' : 'hidden'} fixed w-screen inset-0 flex items-center justify-center`}>
                 <div className="absolute inset-0 backdrop-blur-md w-full"></div>
-                <div className="relative bg-opacity-10 bg-gradient-to-b from-white via-pink-200 to-purple-500 rounded-lg p-8 w-full lg:w-1/3">
+                <div className="text-white relative bg-opacity-10 bg-gradient-to-bl border-darkblue border-4 from-[#08084b46] via-darkblue to-[#08084b46] rounded-lg p-8 w-full lg:w-1/3">
                     <div className="text-center mb-6">
                         <h2 className="text-2xl font-bold">Sign up and Get 20%Off!</h2>
                     </div>
@@ -64,7 +64,7 @@ function LeadForm() {
                                 type="text"
                                 id="name"
                                 name="name"
-                                className="w-full px-4 py-2  rounded-md focus:ring focus:ring-purple-500 border-0 border-b-2  focus:border-darkblue p-2 focus:border-transparent focus:outline-none ring-0  bg-transparent autofill-neutral"
+                                className="w-full px-4 py-2 placeholder-white  rounded-md focus:ring focus:ring-blue-200 border-0 border-b-2 border-blue-100   focus:border-darkblue p-2 focus:border-transparent focus:outline-none ring-0  bg-transparent autofill-neutral"
                                 placeholder="Name"
                                 value={name}
                                 onChange={(e)=>setName(e.target.value)}
@@ -78,7 +78,7 @@ function LeadForm() {
                                 type="email"
                                 id="email"
                                 name="email"
-                                className="w-full px-4 py-2  rounded-md focus:ring focus:ring-purple-500 border-0 border-b-2  focus:border-darkblue p-2 focus:border-transparent focus:outline-none ring-0  bg-transparent autofill-neutral"
+                                className="w-full px-4 py-2 placeholder-white   rounded-md focus:ring focus:ring-blue-200 border-0 border-b-2 border-blue-100  focus:border-darkblue p-2 focus:border-transparent focus:outline-none ring-0  bg-transparent autofill-neutral"
                                 placeholder="Email"
                                 required
                                 value={email}
@@ -87,7 +87,7 @@ function LeadForm() {
                         </div>
                         <button
                             type="submit"
-                            className="w-full bg-opacity-30   text-white py-2 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:ring-purple-500"
+                            className="w-full bg-opacity-30   text-white py-2 rounded-md hover:bg-darkblue focus:outline-none focus:ring focus:ring-purple-500"
                         >
                             Subscribe
                         </button>
@@ -110,7 +110,7 @@ function LeadForm() {
                         </>
                     }
                     <button
-                        className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 cursor-pointer"
+                        className="absolute top-4 right-4 hover:text-gray-700 cursor-pointer"
                         onClick={onClose}
                     >
                         <X></X>
