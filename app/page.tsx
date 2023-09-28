@@ -73,7 +73,7 @@ export default async function Home() {
 
 
 
-      <section className="z-30 bg-gray-100 py-16 md:py-24 xl:py-32 w-full bg-corner-blue bg-[length:55vh_55vh] bg-right-top bg-no-repeat">
+      <section className="z-30 bg-gray-100 py-16 md:py-24 xl:py-32 w-full bg-corner-blue bg-[length:300px_300px] bg-right-top bg-no-repeat">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center container mx-auto px-4 ">
           {/* Image on the right */}
           <div className="bg-inherit shadow-none pr-0 md:pr-24 py-8 md:py-16 xl:py-24">
@@ -145,8 +145,8 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="relative z-30 bg-gray-100  py-10 w-full lg:max-h-screen leading-normal">
-        <div className="absolute w-full h-full bg-corner-blue bg-no-repeat bg-right-top bg-[length:55vh_55vh] transform rotate-180 -z-10">
+      <section className="relative z-30 bg-gray-100  my-10 w-full lg:max-h-screen leading-normal">
+        <div className="absolute w-full h-full bg-corner-blue bg-no-repeat bg-right-top bg-[length:300px_300px] transform rotate-180 -z-10">
         </div>
         <div className="items-center container mx-auto px-4 h-fit">
           <div className=" flex-col gap-1 items-center ">
@@ -169,8 +169,8 @@ export default async function Home() {
 
       </section>
 
-      <section className="relative z-10 bg-gray-100 py-10 md:py-20 lg:py-24 xl:py-32 w-full h-auto max-h-screen leading-normal font-mont">
-        <div className="grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-8 items-center container mx-auto px-4  h-full">
+      <section className="relative z-10 bg-gray-100 my-10 md:my-20 lg:my-24 w-full h-fit max-h-screen leading-normal font-mont">
+        <div className="grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-8 items-center container mx-auto px-4 min-h-fit">
           <div className="w-full h-full md:px-10">
             <FlipCarousel slides={[]}></FlipCarousel>
           </div>

@@ -34,7 +34,7 @@ export default async function RootLayout({
           {/* @ts-expect-error Server Component */}
           <Nav />
         </Suspense>
-        <main className="flex  min-h-screen flex-col items-center justify-center font-mont">
+        <main className="flex bg-gray-100  min-h-screen flex-col items-center justify-center font-mont">
           {children}
         </main>
         <Footer />
