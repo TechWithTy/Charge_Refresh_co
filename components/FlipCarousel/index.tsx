@@ -75,7 +75,7 @@ function FlipCarousel({ slides }: FlipCarouselProps) {
                         >
                         </div>
                         <div
-                            className={`absolute h-5/6 w-[90%]  rounded-custom overflow-hidden  bg-gradient-to-b from-gray-700 to-neutral-500 ${!animateSlide ? 'block' : animate === 'next' ? 'animate-slide-right-fade-away' : 'animate-slide-left-fade-away'}`}
+                            className={`absolute h-5/6 w-[90%] object-fill  rounded-custom overflow-hidden  bg-gradient-to-b from-gray-700 to-neutral-500 ${!animateSlide ? 'block' : animate === 'next' ? 'animate-slide-right-fade-away' : 'animate-slide-left-fade-away'}`}
                         >
                             {slides[currentIndex]}
                         </div>

@@ -29,11 +29,11 @@ export async function sendMail(email: string, message: string) {
 }
 
 
-export async function contactForm(sender: string, message: string,) {
+export async function contactForm(sender: string, message: string, subject: string) {
     const msg: sgMail.MailDataRequired = {
         to: process.env.CONTACT_EMAIL as string, // Change to your recipient
         from: process.env.SENDGRID_EMAIL as string, // Change to your verified sender
-        subject: `Question/Message from ${sender}`,
+        subject: `Question/Message from ${sender} about ${subject}`,
         text: message,
     }
 

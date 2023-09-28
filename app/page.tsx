@@ -136,9 +136,9 @@ export default async function Home() {
           <div className="h-full z-30 lg:px-10">
             <FlipCarousel
               slides={[
-                <Image className="h-full w-full m-0" src={'/hero.png'} alt={"slide"} height={400} width={300}></Image>,
-                <Image className="h-full w-full m-0" src={'/section-2.png'} alt={"slide"} height={400} width={300}></Image>,
-                <Image className="h-full w-full m-0" src={'/authjs.webp'} alt={"slide"} height={400} width={300}></Image>,
+                <Image className="h-full w-full m-0 object-cover" src={'/hero.png'} alt={"slide"} height={400} width={300}></Image>,
+                <Image className="h-full w-full m-0 object-cover" src={'/section-2.png'} alt={"slide"} height={400} width={300}></Image>,
+                <Image className="h-full w-full m-0 object-cover" src={'/authjs.webp'} alt={"slide"} height={400} width={300}></Image>,
               ]}
             ></FlipCarousel>
           </div>
