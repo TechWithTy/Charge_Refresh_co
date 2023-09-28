@@ -63,7 +63,7 @@ function FlipCarousel({ slides }: FlipCarouselProps) {
                     </button>
                 </div>
                 <div className="relative h-full w-full px-10">
-                    <div className="absolute w-16 h-20 top-20 left-0 text-darkblue fill-darkblue"><Dots className="text-darkblue fill-darkblue" /></div>
+                    <div className="absolute z-50 w-16 h-20 top-20 left-0 text-darkblue fill-darkblue"><Dots className="text-darkblue fill-darkblue" /></div>
 
                     <div className="flex h-full items-center justify-center">
                         <div

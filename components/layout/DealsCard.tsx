@@ -20,7 +20,7 @@ const CarDealCard = ({ name, price, description, extra, dealType, car, image }: 
       <div className="row-span-1 text-base text-center align-middle font-semibold rounded-full bg-red-600 m-2 flex items-center justify-center p-1">{dealType === 'SALE' ? '🔥' : '👌'}{dealType}</div>
       <div className="row-span-3 col-span-2 m-2  font-normal text-xs lg:text-sm">{description}</div>
       <div className="w-full row-span-2 col-span-2 m-2">
-        <div className=" text-lg font-bold w-1/2 leading-loose">{name}</div>
+        <div className=" text-lg font-bold w-3/4 leading-loose">{name}</div>
         <div className="bg-darkblue w-32 text-center font-medium text-sm text-white rounded-full py-1 px-4 ">
           {price}
         </div>

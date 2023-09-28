@@ -95,7 +95,7 @@ export default async function Home() {
                 Our mission is to revolutionize car cleaning with a seamless user experience. We envision customers having a Sustainable, convenient, and top-quality detailing services. Founded by industry professionals with a focus on innovation and sustainability.
               </p>
             </div>
-            <div className="flex flex-col lg:flex-row min-h-fit lg:-ml-[300px]">
+            <div className="flex flex-col gap-4 lg:flex-row min-h-fit lg:-ml-[300px]">
               {
                 cardData.map((item, index) => {
                   return (
@@ -159,7 +159,7 @@ export default async function Home() {
               </Balancer>
             </div>
           </div>
-          <div className="w-full h-screen lg:h-auto py-5">
+          <div className="w-full h-96 lg:h-auto py-5">
             <CarDealCarousel
               cards={carDealsList}
             ></CarDealCarousel>
@@ -169,7 +169,7 @@ export default async function Home() {
 
       </section>
 
-      <section className="relative z-10 bg-gray-100 py-10 md:py-20 lg:py-24 xl:py-32 w-full h-[70vh] max-h-screen leading-normal font-mont">
+      <section className="relative z-10 bg-gray-100 py-10 md:py-20 lg:py-24 xl:py-32 w-full h-auto max-h-screen leading-normal font-mont">
         <div className="grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-8 items-center container mx-auto px-4  h-full">
           <div className="w-full h-full md:px-10">
             <FlipCarousel slides={[]}></FlipCarousel>

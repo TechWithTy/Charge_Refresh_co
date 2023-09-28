@@ -46,13 +46,13 @@ export default function Footer() {
         </div>
         <div className="col-span-1 md:col-span-1 lg:col-span-1 flex flex-col text-left">
           <h2 className="font-bold text-left px-10 ">Contact</h2>
-          <div className="flex my-2 h-16 px-10 justify-start items-center align-middle">
+          <div className="flex my-2 h-16 lg:px-10 justify-start items-center align-middle">
             <div className="flex justify-center items-center bg-darkblue rounded-full h-10 w-10">
               <Image className="z-10" src={'/address.svg'} alt={""} width={20} height={20}></Image>
             </div>
             <div className="bg-blue-100 rounded min-h-max w-full "><span className="mx-4">77 Highfield Road London N36 7SB</span></div>
           </div>
-          <div className="flex my-2 h-16 px-10 justify-start items-center  align-middle">
+          <div className="flex my-2 h-16 lg:px-10 justify-start items-center  align-middle">
             <div className="flex justify-center items-center bg-darkblue rounded-full h-10 w-10">
               <Image className="z-10 bg-darkblue rounded-full " src={'/phone.svg'} alt={""} width={20} height={20}></Image>
             </div>
