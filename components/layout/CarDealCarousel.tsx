@@ -20,7 +20,7 @@ function CarDealCarousel({ cards }: React.HTMLAttributes<HTMLDivElement> & { car
   }
   return (
     <>
-      <div {...swipehandlers} className='flex flex-col justify-center items-center h-full w-full z-50'>
+      <div {...swipehandlers} className='flex flex-col justify-center items-center h-fit w-full z-50'>
         <div className="flex flex-col md:flex-row w-full h-full gap-5">
           {cards.slice(currentPage * sildesPerPage, currentPage * sildesPerPage + sildesPerPage).map((card, index) => {
             return (
