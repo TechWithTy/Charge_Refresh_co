@@ -73,7 +73,7 @@ export default async function Home() {
 
 
 
-      <section className="z-30 bg-gray-100 py-16 md:py-24 xl:py-32 w-full bg-corner-blue bg-[length:300px_300px] bg-right-top bg-no-repeat">
+      <section className="z-30 bg-gray-100 pt-10 pb-5 md:py-24 xl:py-32 w-full bg-corner-blue bg-[length:300px_300px] bg-right-top bg-no-repeat">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center container mx-auto px-4 ">
           {/* Image on the right */}
           <div className="bg-inherit shadow-none pr-0 md:pr-24 py-8 md:py-16 xl:py-24">
@@ -114,20 +114,20 @@ export default async function Home() {
       </section>
 
       <section className="z-30 bg-gray-100 py-10 md:py-24 w-full lg:max-h-screen">
-        <div className="grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-8 items-center container mx-auto px-4  h-full">
+        <div className="grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-1 items-center container mx-auto px-4  h-full">
           {/* Image on the right */}
-          <div className="bg-inherit shadow-none ml-0 md:ml-10 h-full">
+          <div className="bg-inherit shadow-none ml-0 lg:ml-10 h-fit ">
             <div className="p-5 md:p-10 items-center">
-              <div className="flex flex-col text-xl md:text-3xl text-black font-bold m-4 md:m-10">
+              <div className="flex flex-col text-xl md:text-3xl text-black font-bold my-4 md:m-10">
                 <span>
                   <Balancer>Basic Wash</Balancer>
                 </span>
               </div>
-              <p className="text-gray-600 p-4 md:p-10 w-full md:w-3/4">
+              <p className="text-gray-600 lg:p-10 w-full">
                 Our Basic Wash is designed for those who want a quick refresh for their Tesla. Using top-tier, eco-friendly cleaning agents, we ensure the removal of surface dirt and grime, leaving your vehicle with a clean and glossy finish. Ideal for regular maintenance, this service ensures your Tesla looks good without taking up too much of your time.
               </p>
 
-              <div className="flex justify-center items-center text-center align-middle bg-darkblue w-40 h-16 text-white m-4 md:m-10 rounded-lg shadow-2xl shadow-blue-300">
+              <div className="flex justify-center items-center text-center align-middle bg-darkblue w-40 h-16 text-white my-4 md:m-10 rounded-lg shadow-2xl shadow-blue-300">
                 <p className="inline-block align-bottom text-center">Discover More</p>
               </div>
             </div>
@@ -170,16 +170,16 @@ export default async function Home() {
       </section>
 
       <section className="relative z-10 bg-gray-100 my-10 md:my-20 lg:my-24 w-full h-fit max-h-screen leading-normal font-mont">
-        <div className="grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-8 items-center container mx-auto px-4 min-h-fit">
-          <div className="w-full h-full md:px-10">
+        <div className="grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 lg:gap-8 items-center container mx-auto px-4 min-h-fit">
+          <div className="w-full h-full md:px-10 ">
             <FlipCarousel slides={[]}></FlipCarousel>
           </div>
-          <div className="w-full p-5 md:p-10">
-            <div className="m-1 text-center md:text-left">Elon R. - Palo Alto, CA- ⭐⭐⭐⭐⭐</div>
-            <div className="text-3xl md:text-5xl font-bold m-1 text-center md:text-left">
+          <div className="w-full h-fit p-5 md:p-10">
+            <div className="m-2 text-center md:text-left">Elon R. - Palo Alto, CA- ⭐⭐⭐⭐⭐</div>
+            <div className="text-3xl md:text-5xl font-bold m-2 text-center md:text-left">
               <h1>Ultimate Detailing Package</h1>
             </div>
-            <div className="text-base md:text-lg m-1 text-center md:text-left">
+            <div className="text-base md:text-lg m-2 text-center md:text-left">
               <Balancer>
                 "I've used many detailing services in the past, but none come close to Charge Refresh. The attention to detail, especially with the Ultimate Detailing Package, is impeccable. My Model S looks and feels brand new every time."
               </Balancer>

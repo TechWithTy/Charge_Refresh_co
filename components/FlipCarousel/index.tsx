@@ -1,6 +1,6 @@
 'use client'
 import useSwipe from "@/lib/hooks/use-swipe-gesture";
-import { ChevronLeft, ChevronRight, Circle } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Circle } from "lucide-react";
 import React, { useState } from 'react'
 import Image from "next/image";
 import Dots from '@/public/dotMatrix.svg'
@@ -46,20 +46,20 @@ function FlipCarousel({ slides }: FlipCarouselProps) {
     };
     return (
         <>
-            <div {...swipeHandler} className="relative flex flex-col-reverse  justify-center items-center overflow-x-hidden h-full w-full z-50 ">
-                <div className="flex flex-row justify-around items-center h-1/6">
+            <div {...swipeHandler} className="relative flex flex-col-reverse  justify-center items-center overflow-x-hidden h-full w-full z-50  min-h-[500px]">
+                <div className=" flex flex-row justify-around items-center h-fit w-fit">
 
-                    <button onClick={handlePrevSlide} className=" text-black dark:text-white  py-2 px-4 border-none cursor-pointer left-0">
-                        <ChevronLeft className=''></ChevronLeft>
+                    <button onClick={handlePrevSlide} className=" text-darkblue  py-2 px-4 border-none cursor-pointer left-0">
+                        <ChevronLeft className='font-bold'></ChevronLeft>
                     </button>
                     <div className="flex flex-row justify-evenly ">{
                         [0, 1, 2].map((value, index) => {
-                            return <Circle key={index} className={`text-slate-500`} fill={`${index === currentIndex ? 'blue' : 'transparent'}`}></Circle>
+                            return <Circle key={index} className={`w-4 h-4 m-1 text-darkblue ${index === currentIndex ? 'fill-darkblue' : 'transparent'}`} ></Circle>
                         })
 
                     }</div>
-                    <button onClick={handleNextSlide} className="text-black dark:text-white py-2 px-4 border-none cursor-pointer right-0">
-                        <ChevronRight className=''></ChevronRight>
+                    <button onClick={handleNextSlide} className="text-darkblue dark:text-white py-2 px-4 border-none cursor-pointer right-0">
+                        <ChevronRight className='font-bold'></ChevronRight>
                     </button>
                 </div>
                 <div className="relative h-full w-full px-10">
