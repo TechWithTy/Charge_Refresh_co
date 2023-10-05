@@ -29,7 +29,7 @@ export default function NavBar({ session }: { session: Session | null }) {
 
 
         {/* Navigation links */}
-        <ul className={`${!showNav ? 'hidden' : 'block animate-slide-left-fade container text-center py-5'} fixed flex-col justify-start items-center bg-white left-0 top-full w-screen h-screen lg:bg-inherit lg:w-auto lg:h-auto lg:relative lg:flex lg:flex-row `}>
+        <ul className={`${!showNav ? 'hidden' : 'flex animate-slide-left-fade text-center py-5'} fixed flex-col justify-start items-center bg-white right-0 top-full w-full h-screen lg:bg-inherit lg:w-auto lg:h-auto lg:relative lg:flex lg:flex-row `}>
           <li className="hover:shadow-inner p-2 mx-4">
             <a href="#" className="hover:text-blue-500 mx-1">
               Home
@@ -45,12 +45,13 @@ export default function NavBar({ session }: { session: Session | null }) {
               Services
             </a>
           </li>
-          <li  className="hover:shadow-inner p-2 mx-4  text-center flex justify-center">
+          <li className="relative hover:shadow-inner p-2 mx-4 w-fit  text-center flex justify-center">
+            Car Specialties
+
             <button
-              className="peer/specials hover:text-blue-500 flex mx-1 self-center"
+              className="peer/specials hover:text-blue-500 flex mx-1 self-center absolute md:static left-full"
               aria-label="Toggle Car Specialties Options"
             >
-              Car Specialties{' '}
               <ChevronDown
                 color="blue"
                 className="light:text-blue-500 dark:text-gray-100"
@@ -82,8 +83,8 @@ export default function NavBar({ session }: { session: Session | null }) {
             </a>
           </li>
           <li className="hover:shadow-inner p-2 mx-4">
-            <div className="md:flex items-end space-x-2 mr-10 lg:hidden">
-              <div className="flex justify-center text-sm font-bold rounded m-2 bg-blue-100 text-blue-700 px-5 py-2">
+            <div className=" items-end space-x-2 mr-10 lg:hidden">
+              <div className="flex justify-center text-sm font-bold rounded m-2 bg-blue-100 text-blue-700 px-5 py-2 whitespace-nowrap">
                 <PhoneCall fill="blue" className="mx-1 p-1" color="blue" />
                 +1 23 456 789123
               </div>
@@ -94,7 +95,7 @@ export default function NavBar({ session }: { session: Session | null }) {
           </li>
         </ul>
 
-        <div className="md:flex items-end space-x-2 mr-10 hidden">
+        <div className="lg:flex items-end space-x-2 mr-10 hidden">
           <div className="flex text-sm font-bold rounded m-2 bg-blue-100 text-blue-700 px-5 py-2">
             <PhoneCall fill="blue" className="mx-1 p-1" color="blue" />
             +1 23 456 789123

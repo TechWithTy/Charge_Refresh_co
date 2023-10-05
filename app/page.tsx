@@ -24,7 +24,7 @@ export default async function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center container mx-auto px-4 ">
           {/* Text on the left */}
           <div className="overflow-visible pt-10 lg:pt-24 text-center lg:text-left">
-            <div className="">
+            <div className="flex justify-center lg:justify-start">
               <TrendingChip trending={"Tesla Model S"} />
             </div>
             <div className="text-4xl lg:text-6xl text-black leading-normal font-bold mt-4 lg:mb-4 ml-2">
@@ -48,7 +48,7 @@ export default async function Home() {
               <Balancer className="mx-2 text-blue-500">Try advanced search</Balancer>
               <ArrowRight className="mx-2" color="blue" />
             </div>
-            <div className="mx-2">
+            <div className="mx-2 my-5">
               <Balancer className="font-medium text-sm text-gray-600">Popular Brands</Balancer>
               <div className="font-bold text-xl">
                 {carList.slice(0, 4).map((car, index) => {
@@ -59,11 +59,11 @@ export default async function Home() {
             </div>
           </div>
           {/* Image on the right */}
-          <div className="h-full text-center lg:text-left">
+          <div className="h-full flex text-center lg:text-left">
             <Image
               src="/hero.png" // Replace with your image URL
               alt="Illustration"
-              className="w-full h-auto rounded-lg shadow-lg self-center"
+              className="w-full h-auto rounded-lg shadow-lg  self-center"
               width={843}
               height={780}
             />
