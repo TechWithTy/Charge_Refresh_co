@@ -15,6 +15,13 @@ function LeadForm() {
     const [showform, setShowform] = useState(true);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+
+    const [isClient, setIsClient] = useState(false)
+
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
+
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
 
@@ -57,7 +64,7 @@ function LeadForm() {
                         <>
                             <LoadingCircle></LoadingCircle>
                         </>}
-                    {showform && <form onSubmit={handleSubmit}>
+                    {showform&& isClient && <form onSubmit={handleSubmit}>
                         <div className="mb-4">
                             {/* <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label> */}
                             <input
