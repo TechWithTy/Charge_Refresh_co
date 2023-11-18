@@ -83,7 +83,7 @@ export default async function Home() {
         <div className="container mx-auto grid grid-cols-1 items-center gap-8 px-4 lg:grid-cols-2 ">
           {/* Image on the right */}
           <div className="bg-inherit py-8 pr-0 shadow-none md:py-16 md:pr-24 xl:py-24">
-            <Image
+            <img
               src="/section-2.png" // Replace with your image URL
               alt="Illustration"
               className="h-auto w-full rounded-e-lg shadow-lg"
